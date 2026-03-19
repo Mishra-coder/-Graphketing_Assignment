@@ -7,12 +7,12 @@ A clean, responsive, and robust React Native application that fetches user data 
 You can download the Android APK directly to evaluate the application.
 
 **Download Link:**
-[Download APK from Expo](https://expo.dev/accounts/devendra.mi/projects/GraphketingAssignment/builds/a8b68c3c-8935-4171-bc45-f3a68d0c465a)
+[Download APK from Expo]([https://expo.dev/accounts/devendra.mi/projects/GraphketingAssignment/builds/a8b68c3c-8935-4171-bc45-f3a68d0c465a](https://expo.dev/accounts/devendra.mi/projects/GraphketingAssignment/builds/a8b68c3c-8935-4171-bc45-f3a68d0c465a)
 
 **Scan to Download:**
-<p align="left">
-  <img src="./qr-code.png" width="200" alt="QR Code for APK" />
-</p>
+
+<img width="263" height="265" alt="Screenshot 2026-03-19 at 5 19 36 PM" src="https://github.com/user-attachments/assets/1a525575-8ce8-43b9-976d-3f176a397ecb" />
+
 
 ## Overview
 

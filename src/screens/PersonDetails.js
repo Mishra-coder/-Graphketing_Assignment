@@ -1,21 +1,30 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, Linking, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Linking, TouchableOpacity, Alert } from 'react-native';
 import { Mail, Phone, Building, Globe, MapPin } from 'lucide-react-native';
 
 const PersonDetails = ({ route }) => {
   const { person } = route.params;
 
+  const openAppUrl = async (url) => {
+    try {
+      await Linking.openURL(url);
+    } catch (error) {
+      Alert.alert('Action Unavailable', 'This action cannot be performed on the current device or simulator.');
+    }
+  };
+
   const handleEmailPress = () => {
-    Linking.openURL(`mailto:${person.email}`);
+    openAppUrl(`mailto:${person.email}`);
   };
 
   const handlePhonePress = () => {
-    Linking.openURL(`tel:${person.phone}`);
+    const cleanPhone = person.phone.replace(/[^0-9+]/g, '');
+    openAppUrl(`tel:${cleanPhone}`);
   };
 
   const handleWebsitePress = () => {
-    const url = person.website.startsWith('http') ? person.website : `https://${person.website}`;
-    Linking.openURL(url);
+    const urlString = person.website.startsWith('http') ? person.website : `https://${person.website}`;
+    openAppUrl(urlString);
   };
 
   const formattedAddress = `${person.address.street}, ${person.address.suite}\n${person.address.city}, ${person.address.zipcode}`;
